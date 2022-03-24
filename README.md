@@ -1,5 +1,5 @@
 # UDP Poke Battle
-O objetivo deste trabalho prático foi assimilar e exercitar os conceitos sobre programação com sockets e protocolo UDP. O jogo, controlado apenas por linha de comando, se baseia em uma arena onde são posicionados Pokémons atacantes e defensores. Os atacantes começam na primeira coluna e se movem uma posição para frente a cada turno, já os defensores são posicionados aleatoriamente e não se movem. O objetivo é impedir com que os atacantes cheguem ao final da arena e quando qualquer um deles é destruído, um novo surge na posição 0.
+O objetivo deste trabalho prático foi assimilar e exercitar os conceitos sobre programação com sockets e protocolo UDP. O jogo, controlado apenas por linha de comando, se baseia em uma arena onde são posicionados Pokémons atacantes e defensores. Os atacantes começam na primeira coluna e se movem uma posição para frente a cada turno, enquanto os defensores são posicionados aleatoriamente e não se movem. O objetivo é impedir que os atacantes cheguem ao final da arena, e quando qualquer um deles é destruído, um novo surge na posição 0.
 
 O servidor é responsável por executar os comandos enviados pelo cliente, que deve decidir quais pokémons irão realizar a defesa em cada turno (cada defensor só pode defender uma única vez por turno, ou seja, só tira um ponto de vida do atacante a cada turno). Existem apenas três tipos de atacantes: **zubat**, com 1 de vida, **lugia**, com 2 de vida e **mewtwo**, com 3 de vida, que só podem ser barrados por defensores a uma distância de 1 unidade deles. Uma representação da arena de batalha pode ser vista na seguinte imagem:
 
@@ -33,7 +33,7 @@ O cliente pode controlar o jogo com os seguintes comandos:
 
 `shot x y id`: faz o pokémon na posição **(x,y)** bloquear o atacante identificado por **id**. Recebe 0 caso essa ação for permitida e 1, caso contrário.
 
-`gameover`: obtém os status finais do jogo, como número atacantes destruídos, número de atacantes vitoriosos e tempo gasto no jogo.
+`gameover`: obtém os status finais do jogo, como número de atacantes destruídos, número de atacantes vitoriosos e tempo gasto no jogo.
 
 `quit`: encerra execução tanto do cliente como do servidor.
 
